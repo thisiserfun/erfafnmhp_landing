@@ -1,5 +1,5 @@
 # Stage 1: Build the Vue.js application
-FROM node:18-alpine as build-stage
+FROM node:18-alpine AS build-stage
 
 # Set working directory
 WORKDIR /app
@@ -7,17 +7,21 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Clean install dependencies
-RUN npm ci --silent
+# Clean cache and install dependencies
+RUN npm cache clean --force && \
+    npm install --legacy-peer-deps
 
 # Copy all source files
 COPY . .
+
+# Set Node options for compatibility
+ENV NODE_OPTIONS="--openssl-legacy-provider"
 
 # Build the application for production
 RUN npm run build
 
 # Stage 2: Production Nginx server
-FROM nginx:alpine as production-stage
+FROM nginx:alpine AS production-stage
 
 # Install wget for health checks
 RUN apk add --no-cache wget
