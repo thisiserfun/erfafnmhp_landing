@@ -26,8 +26,8 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copy built application from build stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 
-# Copy nginx configuration (simple version without SSL)
-COPY nginx-simple.conf /etc/nginx/nginx.conf
+# Copy nginx configuration
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80
