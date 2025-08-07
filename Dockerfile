@@ -1,5 +1,5 @@
 # Stage 1: Build the Vue.js application
-FROM node:18-alpine AS build-stage
+FROM node:20-alpine AS build-stage
 
 # Set working directory
 WORKDIR /app
@@ -13,9 +13,6 @@ RUN npm cache clean --force && \
 
 # Copy all source files
 COPY . .
-
-# Set Node options for compatibility
-ENV NODE_OPTIONS="--openssl-legacy-provider"
 
 # Build the application for production
 RUN npm run build
