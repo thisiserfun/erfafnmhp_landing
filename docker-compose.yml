@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  # Vue.js Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: erfan-portfolio-app
+    restart: unless-stopped
+    networks:
+      - portfolio-network
+    volumes:
+      - app-dist:/usr/share/nginx/html:rw
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/health"]
+      timeout: 5s
+      interval: 30s
+      retries: 3
+      start_period: 40s
+
+  # Nginx Reverse Proxy with SSL
+  nginx:
+    image: nginx:alpine
+    container_name: erfan-portfolio-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx-ssl.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl-certs:/etc/letsencrypt:ro
+      - ./www:/var/www/certbot:ro
+      # Mount the built app from the app container
+      - app-dist:/usr/share/nginx/html:ro
+    networks:
+      - portfolio-network
+    depends_on:
+      app:
+        condition: service_healthy
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+  # Certbot for SSL certificates
+  certbot:
+    image: certbot/certbot
+    container_name: erfan-portfolio-certbot
+    restart: unless-stopped
+    volumes:
+      - ./ssl-certs:/etc/letsencrypt
+      - ./www:/var/www/certbot
+    environment:
+      - DOMAIN=erfanmohammadpour.mokhtal.xyz
+      - EMAIL=thisiserfun@gmail.com
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+networks:
+  portfolio-network:
+    driver: bridge
+    name: erfan-portfolio-network
+
+volumes:
+  ssl-certs:
+    name: erfan-ssl-certs
+  www:
+    name: erfan-certbot-www
+  app-dist:
+    name: erfan-app-dist
