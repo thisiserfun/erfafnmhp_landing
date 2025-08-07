@@ -1,0 +1,22 @@
+services:
+  # Single container with everything
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: erfan-portfolio
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./ssl-certs:/etc/letsencrypt:ro
+      - ./www:/var/www/certbot:ro
+    networks:
+      - portfolio-network
+    environment:
+      - NODE_ENV=production
+
+networks:
+  portfolio-network:
+    driver: bridge
