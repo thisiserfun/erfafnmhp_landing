@@ -165,7 +165,7 @@
         <div class="grid md:grid-cols-3 gap-8">
           <div v-for="(project, index) in featuredProjects" :key="project.id"
                class="group bg-white dark:bg-dark-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
-            <div class="h-48 bg-gradient-to-br from-primary-500/10 to-accent-500/10 flex items-center justify-center">
+            <div class="h-52 bg-gradient-to-br from-primary-500/10 to-accent-500/10 flex items-center justify-center">
               <component :is="project.icon" class="w-16 h-16 text-primary-500/50" />
             </div>
             <div class="p-6">

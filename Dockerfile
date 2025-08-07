@@ -1,16 +1,16 @@
 # Stage 1: Build the Vue.js application
-FROM node:20-alpine as build-stage
+FROM node:18-alpine as build-stage
 
 # Set working directory
 WORKDIR /app
 
-# Add package file
+# Copy package files
 COPY package*.json ./
 
-# Install dependencies
+# Clean install dependencies
 RUN npm ci --silent
 
-# Copy source code
+# Copy all source files
 COPY . .
 
 # Build the application for production
@@ -32,8 +32,8 @@ COPY --from=build-stage /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Create nginx user and set permissions
-RUN addgroup -g 101 -S nginx \
-    && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx \
+RUN addgroup -g 101 -S nginx 2>/dev/null || true \
+    && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx 2>/dev/null || true \
     && chown -R nginx:nginx /usr/share/nginx/html \
     && chown -R nginx:nginx /var/cache/nginx \
     && chown -R nginx:nginx /var/log/nginx

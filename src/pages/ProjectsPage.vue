@@ -52,7 +52,7 @@
           >
             <div class="card h-full flex flex-col overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <!-- Project Image -->
-              <div class="relative h-48 -mx-6 -mt-6 mb-6 overflow-hidden bg-gradient-to-br from-primary-100 to-purple-100 dark:from-primary-900/20 dark:to-purple-900/20">
+              <div class="relative h-56 -mx-6 -mt-6 mb-6 overflow-hidden bg-gradient-to-br from-primary-100 to-purple-100 dark:from-primary-900/20 dark:to-purple-900/20">
                 <img 
                   :src="project.image" 
                   :alt="project.title"
