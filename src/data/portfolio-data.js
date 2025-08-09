@@ -476,7 +476,7 @@ export const education = [
     {
         id: 2,
         degree: 'High School Diploma - Mathematics & Physics',
-        institution: 'Alamieh Heli High School, Tehran',
+        institution: 'Allameh Helli High School, Tehran',
         period: '2019 - 2022',
         description: 'Elite high school with exceptional achievements in national and international competitions.',
         achievements: [
