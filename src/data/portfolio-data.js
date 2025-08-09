@@ -177,82 +177,197 @@ export const homeSkillCategories = [
 // PROJECTS
 // ==========================================
 export const featuredProjects = [
+  // {
+  //   id: 1,
+  //   title: 'Commodex',
+  //   category: 'Blockchain/DeFi',
+  //   description: 'Global Commodity Derivatives Trading Platform',
+  //   longDescription: 'A 24/7 blockchain-based global marketplace for trading commodity derivatives with tokenized real-world assets as collateral, offering transparency and capital efficiency.',
+  //   tech: ['Blockchain', 'Smart Contracts', 'DeFi', 'Web3', 'Node.js'],
+  //   icon: DollarSign,
+  //   image: '/images/projects/commodex-project.jpg',
+  //   features: ['24/7 Global Trading', 'Tokenized Collateral', 'Transparent Settlement', 'Capital Efficiency'],
+  //   liveUrl: 'https://commodex.io',
+  //   githubUrl: null,
+  //   featured: true
+  // },
   {
-    id: 1,
-    title: 'Commodex',
-    category: 'Blockchain/DeFi',
-    description: 'Global Commodity Derivatives Trading Platform',
-    longDescription: 'A 24/7 blockchain-based global marketplace for trading commodity derivatives with tokenized real-world assets as collateral, offering transparency and capital efficiency.',
-    tech: ['Blockchain', 'Smart Contracts', 'DeFi', 'Web3', 'Node.js'],
-    icon: DollarSign,
-    image: '/images/projects/commodex-project.jpg',
-    features: ['24/7 Global Trading', 'Tokenized Collateral', 'Transparent Settlement', 'Capital Efficiency'],
-    liveUrl: 'https://commodex.io',
-    githubUrl: null,
-    featured: true
-  },
+  id: 1,
+  title: 'Moniaz',
+  category: 'EdTech / LMS',
+  description: 'Next-generation modular smart educational management platform',
+  longDescription: 'Moniaz is an advanced, fully modular educational platform built on microservices architecture and modern technologies. It offers a complete ecosystem for buying and selling courses, managing schools, dedicated student and teacher dashboards, task assignments, online sessions and VOD streaming, exams, blockchain-based certifications, and interactive learning tools. With a professional UX design and PWA support, Moniaz delivers a smooth, scalable, and engaging learning experience.',
+  tech: [
+    'Microservices Architecture',
+    'Node.js',
+    'WebRTC',
+    'RTMP',
+    'Blockchain Certification',
+    'PWA',
+    'Responsive UI/UX'
+  ],
+  icon: BookOpen,
+  image: '/images/projects/moniaz-platform.jpg',
+  features: [
+    'Dedicated dashboards for students, teachers, admins, and advisors',
+    'Course marketplace for buying and selling educational content',
+    'Classroom, exam, and question bank management',
+    'Live sessions, webinars, and VOD playback',
+    'Assignments and project management system',
+    'Messaging, discussion boards, and academic advising',
+    'Blockchain-based digital certifications',
+    'Advanced security with 2FA and RBAC'
+  ],
+  liveUrl: 'https://www.moniaz.ir/',
+  githubUrl: null,
+  featured: true
+},
   {
-    id: 2,
-    title: 'MADT Platform',
-    category: 'Blockchain/Real Estate',
-    description: 'Real Estate Tokenization Platform',
-    longDescription: 'A real estate tokenization platform enabling fractional ownership and liquidity for high-quality global properties through blockchain.',
-    tech: ['Node.js', 'React.js', 'GraphQL', 'JWT', 'Socket.io'],
-    icon: DollarSign,
-    image: '/images/projects/madt-project.jpg',
-    features: ['Fractional Ownership', 'Property Tokenization', 'Global Properties', 'Liquidity Solutions'],
-    liveUrl: 'https://madt.io',
-    githubUrl: null,
-    featured: true
-  },
-  {
-    id: 3,
-    title: 'Bitoment',
-    category: 'DeFi/Asset Management',
-    description: 'Smart Asset Management Hub',
-    longDescription: 'A smart asset management hub connecting CeFi and DeFi, offering easy access to diverse, institutionally managed digital investment products.',
-    tech: ['Python', 'TensorFlow', 'Blockchain', 'React', 'Smart Contracts'],
-    icon: Brain,
-    image: '/images/projects/bitoment-project.jpg',
-    features: ['CeFi/DeFi Bridge', 'Institutional Management', 'Diverse Products', 'Smart Analytics'],
-    liveUrl: 'https://bitoment.com',
-    githubUrl: null,
-    featured: true
-  }
+  id: 2,
+  title: 'MADT Real Estate Tokenization Platform',
+  category: 'Blockchain / Real Estate',
+  description: 'Blockchain-powered platform for fractional real estate ownership and liquidity.',
+  longDescription: 'MADT is an advanced blockchain-based platform revolutionizing the real estate market by enabling fractional ownership of high-value properties. Through secure property tokenization, investors gain access to verified real estate assets with increased liquidity, transparency, and global reach. Each token represents a share in a specific property, backed by legal frameworks to ensure investor rights. The platform integrates real-time market data, automated compliance, and secure transactions, opening doors to democratized real estate investment.',
+  tech: [
+    'Node.js',
+    'React.js',
+    'GraphQL',
+    'JWT',
+    'Socket.io',
+    'Smart Contracts'
+  ],
+  icon: DollarSign,
+  image: '/images/projects/madt-platform.jpg',
+  features: [
+    'Fractional ownership of premium real estate',
+    'Blockchain-based property tokenization',
+    'Legally compliant asset-backed tokens',
+    'Global marketplace for property investment',
+    'Liquidity solutions through secondary markets',
+    'Secure and transparent transactions'
+  ],
+  liveUrl: 'https://madt.ir',
+  githubUrl: null,
+  featured: true
+},
+{
+  id: 3,
+  title: 'Bitoment Smart Asset Management Hub',
+  category: 'DeFi / Asset Management',
+  description: 'Next-generation platform bridging CeFi and DeFi investment products.',
+  longDescription: 'Bitoment is a smart asset management hub that seamlessly integrates centralized finance (CeFi) and decentralized finance (DeFi), giving investors access to a wide range of institutionally managed digital investment products. The platform leverages AI-powered analytics for portfolio optimization, real-time risk assessment, and automated rebalancing. With a focus on transparency, security, and performance, Bitoment empowers both retail and institutional investors to diversify and grow their digital asset portfolios with ease.',
+  tech: [
+    'Python',
+    'TensorFlow',
+    'Blockchain',
+    'React',
+    'Smart Contracts',
+    'REST APIs'
+  ],
+  icon: Brain,
+  image: '/images/projects/bitoment-platform.jpg',
+  features: [
+    'Seamless bridge between CeFi and DeFi ecosystems',
+    'Institutionally managed investment products',
+    'AI-driven analytics and portfolio optimization',
+    'Real-time risk monitoring and reporting',
+    'Diverse asset classes and yield strategies',
+    'Secure custody and transaction infrastructure'
+  ],
+  liveUrl: null,
+  githubUrl: null,
+  featured: true
+}
+
 ]
 
 // All projects (including non-featured)
 export const allProjects = [
   ...featuredProjects,
+  // {
+  //   id: 4,
+  //   title: 'Mintoro',
+  //   category: 'Blockchain/Gold',
+  //   description: 'Gold-Backed Digital Asset Platform',
+  //   longDescription: 'Issues gold-backed tokens (1 troy ounce per token), providing a secure, liquid, and inflation-resistant digital asset for portfolios and DeFi applications.',
+  //   tech: ['Blockchain', 'Smart Contracts', 'Python', 'Web3', 'Security'],
+  //   icon: Shield,
+  //   image: '/images/projects/mintoro-project.jpg',
+  //   features: ['Gold-Backed Tokens', 'DeFi Integration', 'Inflation Resistant', 'Secure Storage'],
+  //   liveUrl: 'https://mintoro.com',
+  //   githubUrl: null,
+  //   featured: false
+  // },
+  // {
+  //   id: 5,
+  //   title: 'Blufund',
+  //   category: 'Fintech/DeFi',
+  //   description: 'Revenue-Based Financing Platform',
+  //   longDescription: 'Finances e-commerce and SaaS sellers by tokenizing their future revenues, delivering fast capital to businesses and high-yield assets to investors.',
+  //   tech: ['Python', 'Django', 'Smart Contracts', 'Data Analytics', 'ML'],
+  //   icon: DollarSign,
+  //   image: '/images/projects/blufund-project.jpg',
+  //   features: ['Revenue Tokenization', 'Fast Capital', 'High-Yield Assets', 'Risk Analytics'],
+  //   liveUrl: 'https://blufund.com',
+  //   githubUrl: null,
+  //   featured: false
+  // },
   {
-    id: 4,
-    title: 'Mintoro',
-    category: 'Blockchain/Gold',
-    description: 'Gold-Backed Digital Asset Platform',
-    longDescription: 'Issues gold-backed tokens (1 troy ounce per token), providing a secure, liquid, and inflation-resistant digital asset for portfolios and DeFi applications.',
-    tech: ['Blockchain', 'Smart Contracts', 'Python', 'Web3', 'Security'],
-    icon: Shield,
-    image: '/images/projects/mintoro-project.jpg',
-    features: ['Gold-Backed Tokens', 'DeFi Integration', 'Inflation Resistant', 'Secure Storage'],
-    liveUrl: 'https://mintoro.com',
-    githubUrl: null,
-    featured: false
-  },
+  id: 4,
+  title: 'Karo Educational VOD Platform',
+  category: 'EdTech / Kids Learning',
+  description: 'AI-powered educational video-on-demand platform for children.',
+  longDescription: 'Karo is an innovative educational video-on-demand (VOD) platform designed specifically for children, combining engaging multimedia learning experiences with advanced machine learning algorithms. It offers personalized content recommendations based on each child’s learning style and progress, while providing a secure environment with strict parental controls. Parents can monitor performance, track progress, and set learning goals through an intuitive dashboard. Built with modern technologies, Karo ensures safe, adaptive, and fun learning for young minds.',
+  tech: [
+    'PHP',
+    'React Native',
+    'ELK Stack',
+    'Machine Learning Models',
+    'REST APIs'
+  ],
+  icon: GraduationCap,
+  image: '/images/projects/karo-educational-platform.jpg',
+  features: [
+    'AI-powered personalized content recommendations',
+    'Secure and age-appropriate content filtering',
+    'Parental control dashboard with learning analytics',
+    'Progress tracking and achievement badges',
+    'Cross-platform accessibility (Web & Mobile)',
+    'Interactive and engaging video learning experience'
+  ],
+  liveUrl: null,
+  githubUrl: null,
+  featured: true
+},
   {
-    id: 5,
-    title: 'Blufund',
-    category: 'Fintech/DeFi',
-    description: 'Revenue-Based Financing Platform',
-    longDescription: 'Finances e-commerce and SaaS sellers by tokenizing their future revenues, delivering fast capital to businesses and high-yield assets to investors.',
-    tech: ['Python', 'Django', 'Smart Contracts', 'Data Analytics', 'ML'],
-    icon: DollarSign,
-    image: '/images/projects/blufund-project.jpg',
-    features: ['Revenue Tokenization', 'Fast Capital', 'High-Yield Assets', 'Risk Analytics'],
-    liveUrl: 'https://blufund.com',
-    githubUrl: null,
-    featured: false
-  },
-  {
+  id: 5,
+  title: 'National Comprehensive Smart Cooperative System',
+  category: 'Government / Cooperative Management',
+  description: 'Integrated digital platform for managing and supporting cooperatives nationwide.',
+  longDescription: 'A secure, AI-enabled, and fully integrated government platform designed to digitize and streamline the management of cooperatives across the country. This system provides online services for cooperative members, managers, inspectors, and unions, enabling registration, reporting, compliance checks, and data-driven decision-making. Built with scalability and high security in mind, it supports millions of users and offers real-time monitoring, analytics, and seamless integration with other national systems.',
+  tech: [
+    'PHP',
+    'Python',
+    'Docker Swarm',
+    'PostgreSQL',
+    'AI Analytics',
+    'RESTful APIs'
+  ],
+  icon: Shield,
+  image: '/images/projects/national-cooperative-system.jpg',
+  features: [
+    'Online cooperative registration and management',
+    'Member, manager, and inspector dashboards',
+    'Automated compliance and reporting tools',
+    'Real-time monitoring and analytics',
+    'Secure authentication with 2FA and RBAC',
+    'Integration with other government services'
+  ],
+  liveUrl: 'https://taavoni.mcls.gov.ir/',
+  githubUrl: null,
+  featured: true
+},
+    {
     id: 6,
     title: 'Tolerance Trading Room',
     category: 'AI Trading',
@@ -266,62 +381,33 @@ export const allProjects = [
     githubUrl: null,
     featured: false
   },
-  {
-    id: 7,
-    title: 'Sport TV',
-    category: 'Streaming',
-    description: 'Live Sports Streaming Platform',
-    longDescription: 'High-performance streaming platform serving thousands of concurrent users with live streaming and real-time statistics.',
-    tech: ['PHP', 'Go', 'JavaScript', 'Microservices'],
-    icon: Globe,
-    image: '/images/projects/sporttv-project.jpg',
-    features: ['Live streaming', 'Multi-bitrate', 'Real-time stats', 'Scalable Architecture'],
-    liveUrl: 'https://sporttv.com',
-    githubUrl: null,
-    featured: false
-  },
-  {
-    id: 8,
-    title: 'Karo Platform',
-    category: 'Education',
-    description: 'Educational VOD for Kids with ML',
-    longDescription: 'Educational video-on-demand platform for children with machine learning-based content recommendation and parental controls.',
-    tech: ['PHP', 'React Native', 'ELK Stack', 'ML Models'],
-    icon: GraduationCap,
-    image: '/images/projects/karo-project.jpg',
-    features: ['ML Personalization', 'Parent Dashboard', 'Progress Tracking', 'Safe Content'],
-    liveUrl: null,
-    githubUrl: null,
-    featured: false
-  },
-  {
-    id: 9,
-    title: 'LSW Voting System',
-    category: 'Government',
-    description: 'National Voting System - Ministry of Cooperatives',
-    longDescription: 'Secure national voting platform with AI-powered analytics for government elections, handling millions of votes securely.',
-    tech: ['PHP', 'Python', 'Docker Swarm', 'AI Analytics'],
-    icon: Shield,
-    image: '/images/projects/voting-project.jpg',
-    features: ['Secure Voting', 'Real-time Results', 'AI Analytics', 'National Scale'],
-    liveUrl: null,
-    githubUrl: null,
-    featured: false
-  },
-  {
-    id: 10,
-    title: 'National Toy Festival',
-    category: 'Event Platform',
-    description: 'National Toy Festival - Kanoon',
-    longDescription: 'Front-end platform for National Toy Festival organized by Institute for the Intellectual Development of Children and Young Adults.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-    icon: Star,
-    image: '/images/projects/toy-festival-project.jpg',
-    features: ['Event Registration', 'Interactive UI', 'Mobile Responsive', 'Festival Information'],
-    liveUrl: null,
-    githubUrl: null,
-    featured: false
-  }
+{
+  id: 7,
+  title: 'National Toy Festival Platform',
+  category: 'Event & Cultural Platform',
+  description: 'Interactive digital platform for the National Toy Festival organized by Kanoon.',
+  longDescription: 'An engaging, user-friendly, and fully responsive web platform designed for the National Toy Festival, hosted by the Institute for the Intellectual Development of Children and Young Adults (Kanoon). The platform provides comprehensive festival information, online registration for participants, interactive showcases of toys and creative works, and a seamless mobile-friendly experience. Built with modern front-end technologies, it offers a vibrant and playful interface that captures the spirit of creativity and innovation.',
+  tech: [
+    'HTML5',
+    'CSS3',
+    'JavaScript (ES6)',
+    'Responsive Design',
+    'Bootstrap'
+  ],
+  icon: Star,
+  image: '/images/projects/toy-festival-platform.jpg',
+  features: [
+    'Online participant registration',
+    'Festival schedule and program details',
+    'Interactive toy showcases and galleries',
+    'Mobile-first responsive design',
+    'Multilingual support',
+    'Engaging and playful UI/UX'
+  ],
+  liveUrl: null,
+  githubUrl: null,
+  featured: true
+}
 ]
 
 // ==========================================
